@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="20" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -148,6 +148,8 @@
 <wire x1="1.27" y1="54.6" x2="1.27" y2="0" width="0" layer="20"/>
 <text x="28.956" y="2.54" size="1.778" layer="21" rot="R90">Matt's Board</text>
 <text x="31.496" y="2.54" size="1.778" layer="21" rot="R90">REV 00</text>
+<hole x="3.302" y="2.032" drill="2.5"/>
+<hole x="32.25" y="52.824" drill="2.5"/>
 </plain>
 <libraries>
 <library name="adafruit">
@@ -498,28 +500,28 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="09J9651" x="48.26" y="82.55" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="30.48" y="52.07" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="R1" library="adafruit" package="R0805" value="" x="22.86" y="41.91" smashed="yes">
+<element name="R3" library="adafruit" package="R0805" value="" x="22.86" y="41.91" smashed="yes">
 <attribute name="MF" value="VISHAY" x="44.45" y="6.35" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="CRCW08051K00FKEB" x="44.45" y="6.35" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="22.098" y="42.926" size="1.27" layer="25"/>
 <attribute name="OC_NEWARK" value="26R4044" x="44.45" y="6.35" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="22.098" y="39.624" size="1.27" layer="27"/>
 </element>
-<element name="R2" library="adafruit" package="R0805" value="" x="26.67" y="34.29" smashed="yes" rot="R90">
+<element name="R4" library="adafruit" package="R0805" value="" x="26.67" y="34.29" smashed="yes" rot="R90">
 <attribute name="MF" value="MULTICOMP PRO" x="55.88" y="64.77" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="MCHP05W4F1003T5E" x="55.88" y="64.77" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="25.654" y="33.528" size="1.27" layer="25" rot="R90"/>
 <attribute name="OC_NEWARK" value="01N6990" x="55.88" y="64.77" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="28.956" y="33.528" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="R3" library="adafruit" package="R0805" value="" x="21.59" y="49.53" smashed="yes" rot="R180">
+<element name="R2" library="adafruit" package="R0805" value="" x="21.59" y="49.53" smashed="yes" rot="R180">
 <attribute name="MF" value="VISHAY" x="-13.97" y="78.74" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="CRCW0805100RJNEA" x="-13.97" y="78.74" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="22.352" y="48.514" size="1.27" layer="25" rot="R180"/>
 <attribute name="OC_NEWARK" value="01H7765" x="-13.97" y="78.74" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="22.352" y="51.816" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="R4" library="adafruit" package="R0805" value="" x="13.97" y="49.53" smashed="yes">
+<element name="R1" library="adafruit" package="R0805" value="" x="13.97" y="49.53" smashed="yes">
 <attribute name="MF" value="VISHAY" x="30.48" y="13.97" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="CRCW0805100RJNEA" x="30.48" y="13.97" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="14.478" y="51.054" size="1.27" layer="25"/>
@@ -530,7 +532,7 @@ design rules under a new name.</description>
 <signals>
 <signal name="N$1">
 <contactref element="LED1" pad="C"/>
-<contactref element="R4" pad="2"/>
+<contactref element="R1" pad="2"/>
 <wire x1="5.3086" y1="50.5714" x2="5.3086" y2="49.7332" width="0.3048" layer="1"/>
 <wire x1="5.8674" y1="51.1302" x2="5.3086" y2="50.5714" width="0.3048" layer="1"/>
 <wire x1="14.2494" y1="51.1302" x2="5.8674" y2="51.1302" width="0.3048" layer="1"/>
@@ -540,7 +542,7 @@ design rules under a new name.</description>
 <wire x1="15.0876" y1="49.7332" x2="14.97" y2="49.53" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$2">
-<contactref element="R4" pad="1"/>
+<contactref element="R1" pad="1"/>
 <contactref element="LED2" pad="A"/>
 <contactref element="IC1" pad="3"/>
 <wire x1="30.1752" y1="48.3362" x2="30.1752" y2="49.4538" width="0.3048" layer="1"/>
@@ -560,7 +562,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$3">
 <contactref element="LED2" pad="C"/>
-<contactref element="R3" pad="2"/>
+<contactref element="R2" pad="2"/>
 <wire x1="25.146" y1="49.4538" x2="27.94" y2="49.4538" width="0.3048" layer="1"/>
 <wire x1="23.4696" y1="47.7774" x2="25.146" y2="49.4538" width="0.3048" layer="1"/>
 <wire x1="21.2344" y1="47.7774" x2="23.4696" y2="47.7774" width="0.3048" layer="1"/>
@@ -570,7 +572,7 @@ design rules under a new name.</description>
 <wire x1="20.6756" y1="49.4538" x2="20.59" y2="49.53" width="0.3048" layer="1"/>
 </signal>
 <signal name="GND">
-<contactref element="R3" pad="1"/>
+<contactref element="R2" pad="1"/>
 <contactref element="BATT" pad="-"/>
 <contactref element="C1" pad="2"/>
 <contactref element="IC1" pad="1"/>
@@ -594,7 +596,7 @@ design rules under a new name.</description>
 <contactref element="IC1" pad="2"/>
 <contactref element="C1" pad="1"/>
 <contactref element="IC1" pad="6"/>
-<contactref element="R2" pad="1"/>
+<contactref element="R4" pad="1"/>
 <wire x1="21.2344" y1="33.2486" x2="21.5138" y2="33.2486" width="0.3048" layer="1"/>
 <wire x1="21.5138" y1="33.2486" x2="26.543" y2="33.2486" width="0.3048" layer="1"/>
 <wire x1="20.6756" y1="33.8074" x2="21.2344" y2="33.2486" width="0.3048" layer="1"/>
@@ -605,7 +607,6 @@ design rules under a new name.</description>
 <wire x1="21.5138" y1="23.4696" x2="20.1168" y2="22.0726" width="0.3048" layer="1"/>
 <wire x1="21.5138" y1="33.2486" x2="21.5138" y2="23.4696" width="0.3048" layer="1"/>
 <wire x1="19.2786" y1="22.0726" x2="19.05" y2="22.01" width="0.3048" layer="1"/>
-<wire x1="19.558" y1="33.528" x2="19.5834" y2="33.655" width="0.3048" layer="1"/>
 <wire x1="19.5834" y1="33.655" x2="19.05" y2="34.1884" width="0.3048" layer="1"/>
 <wire x1="19.05" y1="34.1884" x2="18.3990625" y2="34.1884" width="0.3048" layer="1"/>
 <wire x1="18.3990625" y1="34.1884" x2="17.0274625" y2="35.56" width="0.3048" layer="1"/>
@@ -615,8 +616,8 @@ design rules under a new name.</description>
 <wire x1="17.0274625" y1="35.56" x2="14.7225375" y2="35.56" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$6">
-<contactref element="R1" pad="1"/>
-<contactref element="R2" pad="2"/>
+<contactref element="R3" pad="1"/>
+<contactref element="R4" pad="2"/>
 <contactref element="IC1" pad="7"/>
 <wire x1="20.955" y1="35.2044" x2="21.7932" y2="35.2044" width="0.3048" layer="1"/>
 <wire x1="21.7932" y1="35.2044" x2="26.543" y2="35.2044" width="0.3048" layer="1"/>
@@ -629,7 +630,6 @@ design rules under a new name.</description>
 <signal name="N$7">
 <contactref element="IC1" pad="5"/>
 <contactref element="C2" pad="1"/>
-<wire x1="19.558" y1="32.131" x2="19.5834" y2="32.385" width="0.3048" layer="1"/>
 <wire x1="26.67" y1="22.01" x2="24.98" y2="20.32" width="0.3048" layer="1"/>
 <wire x1="24.98" y1="20.32" x2="15.24" y2="20.32" width="0.3048" layer="1"/>
 <wire x1="15.24" y1="28.0416" x2="19.5834" y2="32.385" width="0.3048" layer="1"/>
@@ -639,7 +639,7 @@ design rules under a new name.</description>
 <contactref element="BATT" pad="+$1"/>
 <contactref element="BATT" pad="+$2"/>
 <contactref element="LED1" pad="A"/>
-<contactref element="R1" pad="2"/>
+<contactref element="R3" pad="2"/>
 <contactref element="IC1" pad="4"/>
 <contactref element="IC1" pad="8"/>
 <wire x1="8.6614" y1="11.4554" x2="5.8674" y2="11.4554" width="0.3048" layer="1"/>
